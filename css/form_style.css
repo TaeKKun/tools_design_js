@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(87, 189, 130);
+  transition: background 0.5s ease;
+}
+
+.field-name,
+.field-email,
+.field-pass,
+.field-finish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.field-name i,
+.field-email i,
+.field-pass i,
+.field-finish i {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.field-name input,
+.field-email input,
+.field-pass input {
+  flex: 1;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+div.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(0%, -50%);
+  }
+  50% {
+    transform: translate(-85%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

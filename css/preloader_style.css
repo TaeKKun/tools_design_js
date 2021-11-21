@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.preload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #77b3d4;
+  transition: opacity 7s ease;
+}
+
+.preload h3 {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-75%);
+  color: white;
+  font-size: 30px;
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cloud01,
+.cloud02,
+.cloud03 {
+  position: absolute;
+  right: 0;
+  height: 100px;
+  z-index: -1;
+}
+
+.cloud01 {
+  top: 25%;
+  transform: translate(100%, -25%);
+  animation: clouds 5.5s ease-in-out infinite 1.6s;
+}
+
+.cloud02 {
+  top: 50%;
+  transform: translate(100%, -50%);
+  animation: clouds 9s ease-in-out infinite 9s;
+}
+
+.cloud03 {
+  top: 75%;
+  transform: translate(100%, -75%);
+  animation: clouds 7.5s ease-in-out infinite 4s;
+}
+
+.airplane {
+  height: 200px;
+  animation: airplane 1s ease-in-out infinite alternate;
+}
+
+section img {
+  height: 200px;
+}
+
+@keyframes airplane {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes clouds {
+  from {
+    right: 0;
+  }
+  to {
+    right: 130%;
+  }
+}
